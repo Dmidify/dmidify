@@ -1,0 +1,10 @@
+/* Map */
+
+.map {
+  height: 500px;
+
+  @include breakpoint(tiny) {
+    height: 75%;
+  }
+
+}

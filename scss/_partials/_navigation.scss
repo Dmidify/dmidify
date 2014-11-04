@@ -1,0 +1,159 @@
+/* Side Menu */
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: 0;
+  overflow-y: auto;
+  background: rgba(255, 233, 250, 0.90);
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+
+  @include breakpoint(tiny) {
+    width: 250px;
+    left: -250px;
+  }
+
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint(tiny) {
+    top: 0;
+  }
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 70px;
+  font-size: 20px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999;
+
+  .nav-icon {
+    margin-right: 30px;
+  }
+
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+
+  &.a {
+    background: rgba(255, 0, 0, 1);
+  }
+
+  &.b {
+    background: rgb(243, 232, 0);
+  }
+
+  &.c {
+    background: rgb(255, 167, 32);
+  }
+
+  &.d {
+    background: rgb(77, 255, 8);
+  }
+
+  &.e {
+    background: rgb(6, 8, 255);
+  }
+
+  &.f {
+    background: rgb(0, 214, 255);
+  }
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999;
+
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+}
+
+#menu-toggle {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+
+  @include breakpoint (tiny) {
+    display: block;
+  }
+
+}
+
+#menu-close {
+  color: #999;
+  display: none;
+
+  @include breakpoint (tiny) {
+    display: block;
+  }
+
+  &:hover {
+    transform: rotate(90deg) ;
+    -webkit-transform: rotate(90deg) ;
+    -moz-transform: rotate(90deg) ;
+    -o-transform: rotate(90deg) ;
+    -ms-transform: rotate(90deg) ;
+    -webkit-transition: .5s linear all;
+    -moz-transition: .5s linear all;
+    -ms-transition: .5s linear all;
+    -o-transition: .5s linear all;
+    transition: .5s linear all;
+  }
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+
+
+  @include breakpoint(tiny) {
+    width: 100%;
+    left: 0;
+
+  }
+
+}
+
+.toggle {
+  margin: 5px 5px 0 0;
+}
+

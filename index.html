@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -36,24 +37,27 @@
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <a id="menu-close" href="#" class="btn btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top">Start Bootstrap</a>
+                <a class="brand" href="#top">Dmidify Studios</a>
             </li>
             <li>
-                <a href="#top">Home</a>
+                <a class="a" href="#top"><i class="fa fa-home fa-lg fa-fw nav-icon"></i> HOME</a>
             </li>
             <li>
-                <a href="#about">About</a>
+                <a class="b" href="#about"><i class="fa fa-book fa-lg fa-fw nav-icon"></i> ABOUT</a>
             </li>
             <li>
-                <a href="#services">Services</a>
+                <a class="c" href="#services"><i class="fa fa-tablet fa-lg fa-fw nav-icon"></i> SERVICES</a>
             </li>
             <li>
-                <a href="#portfolio">Portfolio</a>
+                <a class="d" href="#portfolio"><i class="fa fa-rocket fa-lg fa-fw nav-icon"></i> PORTFOLIO</a>
             </li>
             <li>
-                <a href="#contact">Contact</a>
+                <a class="e" href="#blog"><i class="fa fa-newspaper-o fa-lg fa-fw nav-icon"></i> BLOG</a>
+            </li>
+            <li>
+                <a class="f" href="#contact"><i class="fa fa-phone fa-lg fa-fw nav-icon"></i> CONTACT</a>
             </li>
         </ul>
     </nav>
@@ -61,8 +65,9 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Start Bootstrap</h1>
-            <h3>Free Bootstrap Themes &amp; Templates</h3>
+            <h1>D. Hollind Mittelberg</h1>
+            <hr>
+            <h3>Something. Something. Something. Darkside.</h3>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
         </div>
@@ -220,18 +225,8 @@
         </div>
     </aside>
 
-    <!-- Map -->
-    <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-        </iframe>
-    </section>
-
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -271,15 +266,17 @@
     <!-- Custom Theme JavaScript -->
     <script>
     // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
+    $("#menu-close, .sidebar-nav > li > a").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
+
     });
 
     // Opens the sidebar menu
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
+
     });
 
     // Scrolls to the selected menu item on the page
@@ -296,6 +293,7 @@
                     return false;
                 }
             }
+
         });
     });
     </script>
