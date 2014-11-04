@@ -7,17 +7,45 @@
   width: 250px;
   height: 100%;
   margin-right: 0;
-  overflow-y: auto;
-  background: rgba(255, 233, 250, 0.90);
+//  overflow-y: auto;
+  background: rgba(77, 225, 167, 0.90);
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
+  overflow: hidden;
 
   @include breakpoint(tiny) {
     width: 250px;
     left: -250px;
+  }
+
+  .fa-tablet {
+    position: relative;
+    top: 0;
+    left: -30px;
+    font-size: 16px;
+  }
+
+  &.shrink {
+    left: -200px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+
+    @include breakpoint(tiny) {
+      width: 250px;
+      left: -250px;
+    }
+
+    .nav-icon {
+      position: relative;
+      left: 5px;
+    }
+
   }
 
 }
@@ -29,6 +57,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: right;
 
   @include breakpoint(tiny) {
     top: 0;
@@ -39,12 +68,14 @@
   text-indent: 20px;
   line-height: 70px;
   font-size: 20px;
+
 }
 
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #999;
+  color: rgba(251, 255, 253, 0.90);
+
 
   .nav-icon {
     margin-right: 30px;
@@ -54,30 +85,31 @@
 
 .sidebar-nav li a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #f8f9ba;
+
 
   &.a {
-    background: rgba(255, 0, 0, 1);
+    background: rgb(27, 125, 87);
   }
 
   &.b {
-    background: rgb(243, 232, 0);
+    background: rgb(27, 125, 87);
   }
 
   &.c {
-    background: rgb(255, 167, 32);
+    background: rgb(27, 125, 87);
   }
 
   &.d {
-    background: rgb(77, 255, 8);
+    background: rgb(27, 125, 87);
   }
 
   &.e {
-    background: rgb(6, 8, 255);
+    background: rgb(27, 125, 87);
   }
 
   &.f {
-    background: rgb(0, 214, 255);
+    background: rgb(27, 125, 87);
   }
 }
 
@@ -90,10 +122,11 @@
   height: 55px;
   font-size: 18px;
   line-height: 55px;
+  margin-right: 20px;
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #999;
+  color: #fbfbfb;
 
 }
 
@@ -114,8 +147,29 @@
 
 }
 
+#menu-toggle-lg {
+  color: rgba(251, 255, 253, 0.90);
+
+  @include breakpoint(tiny) {
+    display: none;
+  }
+
+  &.shrink {
+    margin-right: 1px;
+    -webkit-transform: rotate(180deg) ;
+    -moz-transform: rotate(180deg) ;
+    -o-transform: rotate(180deg) ;
+    -ms-transform: rotate(180deg) ;
+    -webkit-transition: .5s linear all;
+    -moz-transition: .5s linear all;
+    -ms-transition: .5s linear all;
+    -o-transition: .5s linear all;
+    transition: .5s linear all;
+  }
+}
+
 #menu-close {
-  color: #999;
+  color: rgba(251, 255, 253, 0.90);
   display: none;
 
   @include breakpoint (tiny) {
@@ -144,16 +198,18 @@
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 
-
   @include breakpoint(tiny) {
     width: 100%;
     left: 0;
-
   }
 
 }
 
 .toggle {
   margin: 5px 5px 0 0;
+}
+
+.hide {
+  display: none;
 }
 
